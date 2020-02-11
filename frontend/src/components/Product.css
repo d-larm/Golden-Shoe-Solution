@@ -1,0 +1,22 @@
+.product-card {
+    width: 30vw;
+    height: 20vh;
+    margin: 2vmin;
+    text-decoration: none;
+    color: black;
+}
+
+.product-card-image {
+    height: 15vmin;
+    /* width: 15vmin; */
+    /* height: 30vmin; */
+}
+
+.product-card-name {
+    font-size: 1em;
+}
+
+.product-card-price {
+    font-weight: bolder;
+    font-size: 1.2em;
+}

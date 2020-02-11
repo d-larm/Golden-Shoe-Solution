@@ -1,0 +1,10 @@
+.home-main-product {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.main-product-link {
+    text-decoration: none;
+    color: black;
+}

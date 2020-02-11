@@ -1,0 +1,81 @@
+/* Item page elements */
+
+.item-page {
+    width: 100%;;
+    height: auto;
+    margin-top: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.item-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-page-image {
+    /* width: 45vmin; */
+    height: 50vmin;
+    max-height: 150px;
+    float: left;
+}
+
+.item-page-name {
+    font-size: 6vmin;
+    margin: 30px;
+}
+
+.item-page-price {
+    font-weight: bolder;
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.item-page-description {
+    font-weight: 1000;
+    color: blue;
+    width: 100%;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    margin-top: 5vmin;
+}
+
+.item-page-colour {
+    font-weight: 1000;
+    color: blue;
+    display: block;
+    float: left;
+    font-size: 1.3em;
+    margin-top: 3vmin;
+}
+
+.item-page-sizes {
+    margin-top: 5vmin;
+    min-width: 15vmin;
+    text-align: center;
+    border: 1px solid black;
+}
+
+option {
+    text-align: center;
+}
+
+.add-basket-button {
+    transition: 300ms;
+    align-self: center;
+    font-size: 1em;
+    float: right;
+    width: 20vmin;
+    border: 2px solid black;
+    margin-top: 10vmin;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-basket-button:hover {
+    transition: 300ms;
+    background-color: grey;
+    color: white;
+}

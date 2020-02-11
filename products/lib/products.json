@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Mens Vans - Black",
+    "image": "/assets/images/vans-black.jpg",
+    "description": "Black Vans Original",
+    "colour": "Black",
+    "category": "mens-casual",
+    "gender": "Male",
+    "sizes": [ "7", "8", "9", "11" ],
+    "price": 39.99 
+  },
+
+  {
+    "name": "Womens Vans - White",
+    "image": "/assets/images/vans-white.jpg",
+    "description": "White Vans Original",
+    "colour": "White",
+    "category": "womens-casual",
+    "gender": "Female",
+    "sizes": [ "4", "5", "6", "7" ],
+    "price": 49.99 
+  },
+
+  {
+    "name": "Womens Hiking Sandles",
+    "image": "/assets/images/hiking-sandles.jpg",
+    "description": "Brown Hiking Shoes",
+    "colour": "Brown",
+    "category": "womens-sportswear",
+    "sizes": [ "3", "4", "6", "7" ],
+    "price": 29.99 
+  },
+
+  {
+    "name": "Mens Casual Shoes",
+    "image": "/assets/images/mens-casual.jpg",
+    "description": "Vennor Walk Casual Shoes",
+    "colour": "Light Grey",
+    "category": "mens-casual",
+    "sizes": [ "7", "8", "9", "11" ],
+    "price": 99.99 
+  },
+
+  {
+    "name": "Mens Indestructible Trainers",
+    "image": "/assets/images/indestructible-trainers.jpg",
+    "description": "Indestructible trainers layered with steel",
+    "colour": "Black",
+    "category": "mens-sportswear",
+    "sizes": [ "7", "8", "9", "11" ],
+    "price": 129.99 
+  },
+
+  {
+    "name": "Mens Nike Basketball Trainers",
+    "image": "/assets/images/nike-trainers.jpg",
+    "description": "Nike Air Basketball shoes",
+    "colour": "Black, White",
+    "category": "mens-sportswear",
+    "sizes": [ "7", "8", "9", "11" ],
+    "price": 129.99 
+  },
+
+  {
+    "name": "Womens Nike Basketball Trainers",
+    "image": "/assets/images/nike-trainers.jpg",
+    "description": "Nike Air Basketball shoes",
+    "colour": "Black, White",
+    "category": "womens-sportswear",
+    "sizes": [ "3", "4", "5", "7" ],
+    "price": 119.99 
+  }
+]
+
+// db.products.createIndex({ name: "text", description: "text", category: "text", colour: "text", gender: "text" })

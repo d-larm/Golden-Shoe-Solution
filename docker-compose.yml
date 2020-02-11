@@ -1,0 +1,91 @@
+version: '3.7'
+services:
+
+  # search:
+  #   container_name: search
+  #   build: 
+  #     context: ./search
+  #     dockerfile: ../Dockerfile
+  #   ports:
+  #     - ${SEARCH_PORT}:${SEARCH_PORT}
+  #   depends_on:
+  #     - mongo
+  #   environment:
+  #     - NODE_ENV=${NODE_ENV}
+  #     - PORT=${SEARCH_PORT}
+  #     - MONGO_URL=${MONGO_URL}
+  #     - MONGO_DB_NAME=${MONGO_DB_NAME}
+  #   volumes:
+  #     - ./search:/usr/app/search
+
+  # profiles:
+  #   container_name: profiles
+  #   build: 
+  #     context: ./profiles
+  #     dockerfile: ../Dockerfile
+  #   ports:
+  #     - ${PROFILES_PORT}:${PROFILES_PORT}
+  #   depends_on:
+  #     - mongo
+  #   environment:
+  #     - NODE_ENV=${NODE_ENV}
+  #     - PORT=${PROFILES_PORT}
+  #     - MONGO_URL=${MONGO_URL}
+  #     - MONGO_DB_NAME=${MONGO_DB_NAME}
+  #   volumes:
+  #     - ./profiles:/usr/app/profiles
+
+  products:
+    container_name: golden-shoe-products
+    build: 
+      context: ./products
+      dockerfile: ../Dockerfile
+    ports:
+      - ${PRODUCTS_PORT}:${PRODUCTS_PORT}
+    depends_on:
+      - mongo
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PRODUCTS_PORT}
+      - MONGO_URL=${MONGO_URL}
+      - MONGO_DB_NAME=${MONGO_DB_NAME}
+    volumes:
+      - ./products:/usr/app/products
+
+
+      
+    
+  mongo:
+    image: mongo
+    container_name: golden-shoe-mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+    ports:
+      - ${MONGO_HOST_PORT}:${MONGO_PORT}
+    volumes:
+      - /data/db
+
+
+
+  frontend:
+    container_name: golden-shoe-frontend
+    build: 
+        context: ./frontend
+        dockerfile: ../Dockerfile
+    depends_on:
+      - mongo
+      - products
+    ports:
+      - 8080:3000
+    
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - SEARCH_PORT=${SEARCH_PORT}
+      - PRODUCTS_PORT=${PRODUCTS_PORT}
+      - MONGO_URL=${MONGO_URL}
+      - MONGO_DB_NAME=${MONGO_DB_NAME}
+    volumes:
+      - ./frontend:/usr/app
+

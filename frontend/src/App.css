@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+hr {
+  border-width: 1px;
+}
+
+
+.App {
+  /* font-family: 'Liu Jian Mao Cao', cursive; */
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  position:relative;
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.page {
+  position: absolute;
+  min-height: 100%;
+  background-color: lightgrey;
+  top: 80px;
+  left: 0;
+  z-index: 1;
+
+}
+
+.page-enter {
+  /* opacity: 0; */
+  left: 100vw;
+  /* transform: scale(1.1); */
+}
+
+.page-enter-active {
+  /* opacity: 1; */
+  left: 0;
+  /* transform: scale(1); */
+  transition: 500ms;
+  
+  /* transition: slide 300ms forwards; */
+}
+
+.page-exit {
+  /* opacity: 1; */
+  left: 0vw;
+  /* transform: scale(1); */
+}
+
+.page-exit-active {
+  /* opacity: 0; */
+  left: -100vw;
+  /* transform: scale(0.9); */
+  transition: 500ms;
+  /* transition: slide 300ms forwards; */
+}

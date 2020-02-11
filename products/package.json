@@ -1,0 +1,28 @@
+{
+  "name": "search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "url": "/search",
+  "prefix": "api",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-per-env",
+    "start:production": "node -r esm server.js",
+    "start:development": "nodemon -L --exec node -r esm server.js | bunyan"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-middleware": "^1.0.0",
+    "cors": "^2.8.5",
+    "cross-per-env": "^1.0.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongodb": "^3.2.7",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

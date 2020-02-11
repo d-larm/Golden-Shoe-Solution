@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    min-height: 30vh;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    animation: container-enter 500ms linear;
+
+}
+
+.container.shop {
+    flex-wrap: wrap;
+}
+.flexible {
+    min-height: 0px;
+}
+
+.vertical {
+    flex-direction:column;
+}
+
+
+@keyframes container-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -2,8 +2,10 @@
     width: 30vw;
     height: 20vh;
     margin: 2vmin;
+    margin-bottom: 5vmin;
     text-decoration: none;
     color: black;
+    animation: product-enter 500ms linear;
 }
 
 .product-card-image {
@@ -19,4 +21,9 @@
 .product-card-price {
     font-weight: bolder;
     font-size: 1.2em;
+}
+
+@keyframes product-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

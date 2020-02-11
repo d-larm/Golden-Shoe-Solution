@@ -18,7 +18,8 @@ export const BasketItem : FunctionComponent<ProductProps> = ( { name, _id: id, p
             <FontAwesomeIcon icon={faTimes} className='product-remove' onClick={() => removeBasketItem()}/>
             <Link className='product-card basket' to={`/products/${id}`} key={id}>
                 <img className='product-card-image' src={image} alt={name} />
-                <div className='product-card-name'>{name}</div> 
+                <div className='product-card-name'>{name}</div>
+                <div className='product-card-size'>Size {size}</div> 
                 <div className='product-card-price'>£{price.toFixed(2)}</div>
             </Link>
             

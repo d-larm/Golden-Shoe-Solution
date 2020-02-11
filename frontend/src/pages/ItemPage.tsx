@@ -24,12 +24,12 @@ const ItemPage : FunctionComponent<any> = ( { match, history } ) => {
 
     const addItemToBasket = () => {
 
-        if( selectedSize === ''){
+        if( selectedSize === ''){ // If no size selected then error
             swal( "Error", "A size has not been selected","error" )
             return
         }
         
-        if( itemInfo && ( itemInfo as ProductProps).stock <= 0 ) {
+        if( itemInfo && ( itemInfo as ProductProps).stock <= 0 ) { // Prevent out of stock item from being added
             swal( "Error", "This item is currently out of stock","error" )
             return
         }

@@ -3,7 +3,7 @@ import Container from '../components/Container'
 
 import './MyAccount.css'
 
-const MyAccount : FunctionComponent<{}> = () => {
+const MyAccount : FunctionComponent<{}> = () => { // Future development
     return (
         <>
         <Container flexible>

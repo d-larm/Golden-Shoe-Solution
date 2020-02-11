@@ -15,7 +15,7 @@ const Search : FunctionComponent<any> = ( { history } ) => {
     const [ searchInput, setSearchInput ] = useState('')
     const [ searchCategory, setSearchCategory ] = useState('')
 
-    const search = ( input: string, category: string ) => {
+    const search = ( input: string, category: string ) => { // Route depending on the search being made
         if( input && category )
             history.push( `/products/search/${input}/${category}` )
         else if( input )

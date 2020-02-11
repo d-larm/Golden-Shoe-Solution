@@ -31,6 +31,8 @@ const Home : FunctionComponent<any> = () => {
         const getProductList = async () => {
             const products = await getAllProducts()
             setProductList( products )
+            
+            // Randomly select a product to be highlighted
             const index = Math.round(Math.random()*(products.length - 1))
             products.length > 0 && setMainProduct(products[ index ])
         }

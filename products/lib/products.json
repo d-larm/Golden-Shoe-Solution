@@ -7,7 +7,8 @@
     "category": "mens-casual",
     "gender": "Male",
     "sizes": [ "7", "8", "9", "11" ],
-    "price": 39.99 
+    "price": 39.99,
+    "stock": 540
   },
 
   {
@@ -18,7 +19,8 @@
     "category": "womens-casual",
     "gender": "Female",
     "sizes": [ "4", "5", "6", "7" ],
-    "price": 49.99 
+    "price": 49.99,
+    "stock": 12
   },
 
   {
@@ -28,7 +30,8 @@
     "colour": "Brown",
     "category": "womens-sportswear",
     "sizes": [ "3", "4", "6", "7" ],
-    "price": 29.99 
+    "price": 29.99,
+    "stock": 22
   },
 
   {
@@ -38,7 +41,8 @@
     "colour": "Light Grey",
     "category": "mens-casual",
     "sizes": [ "7", "8", "9", "11" ],
-    "price": 99.99 
+    "price": 99.99,
+    "stock": 0
   },
 
   {
@@ -48,7 +52,8 @@
     "colour": "Black",
     "category": "mens-sportswear",
     "sizes": [ "7", "8", "9", "11" ],
-    "price": 129.99 
+    "price": 129.99,
+    "stock": 26
   },
 
   {
@@ -58,7 +63,8 @@
     "colour": "Black, White",
     "category": "mens-sportswear",
     "sizes": [ "7", "8", "9", "11" ],
-    "price": 129.99 
+    "price": 129.99,
+    "stock": 9
   },
 
   {
@@ -68,7 +74,8 @@
     "colour": "Black, White",
     "category": "womens-sportswear",
     "sizes": [ "3", "4", "5", "7" ],
-    "price": 119.99 
+    "price": 119.99,
+    "stock": 0 
   }
 ]
 

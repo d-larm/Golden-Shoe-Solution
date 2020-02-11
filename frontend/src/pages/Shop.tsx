@@ -7,17 +7,6 @@ import { withRouter } from 'react-router-dom'
 
 import Search from '../components/Search'
 
-const items = [
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-    { id: Math.random().toString(), image: Shirt, name: 'Shirt', price: 20 },
-]
-
 const Shop : FunctionComponent<any> = ( { match } ) => {
     const [ productList, setProductList ] = useState<Array<ProductProps>>()
 
@@ -29,16 +18,16 @@ const Shop : FunctionComponent<any> = ( { match } ) => {
         }
 
         const searchProducts = async () => {
-            if( match ) {
-                console.log(match.params)
+            if( match ) { // Checks if a search has been made
                 const { query, category } = match.params || { }
+                // Searches based on inputted query and category
                 const products = await search( query, category )
                 setProductList( products )
             }
             
         }
 
-        if( match && !match.params.query )
+        if( match && !match.params.query ) // Determines whether all products are displayed or queried products
             getProducts()
         else
             searchProducts()

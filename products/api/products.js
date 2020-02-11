@@ -53,6 +53,7 @@ endpoint.get( '/products/search', async ( { query: { page, size, searchString = 
   
 } )
 
+
 endpoint.get( '/products/:id', async ( { params: { id = '' } }, res ) => {
   try {
     console.log( id )

@@ -1,0 +1,10 @@
+.account-option:hover {
+    transition: 300ms;
+    background-color: lightgrey;
+}
+
+.account-option {
+    transition: 300ms;
+    background-color: white;
+
+}

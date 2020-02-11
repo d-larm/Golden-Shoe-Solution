@@ -20,6 +20,8 @@ const Search : FunctionComponent<any> = ( { history } ) => {
             history.push( `/products/search/${input}/${category}` )
         else if( input )
             history.push( `/products/search/${input}` )
+        else if( category )
+            history.push( `/products/search/${category}` )
         else
             return
     }

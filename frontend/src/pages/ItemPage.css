@@ -8,6 +8,7 @@
     color: black;
 }
 
+
 .item-page-container {
     display: flex;
     justify-content: center;
@@ -78,4 +79,12 @@ option {
     transition: 300ms;
     background-color: grey;
     color: white;
+}
+
+.available {
+    color: lightgreen;
+}
+
+.unavailable {
+    color: red
 }

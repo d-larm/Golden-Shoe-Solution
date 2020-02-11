@@ -25,13 +25,20 @@ const App : FC = () => {
   const [ basketItems, setBasketItems ] = useState(basketData)
 
   const addItem = ( item: BasketItemProps) => {
+    // Adds item to localStorage to save checkout items
     localStorage.setItem('basket', JSON.stringify([ ...basketItems, item ]))
+
+    // Updates basket context
     setBasketItems( [ ...basketItems, item] )
     swal("Added to basket", "Item has been added to the basket","success")   
   }
 
   const removeItem = ( id: string ) => {
+    
+    // Flag to indicate that item has been removed
     let itemRemoved = false
+
+    // Remove item that matches the ID of removed item
     const newBasket = basketItems.filter( (item: BasketItemProps) => {
       const match = item._id === id
       const removedState = itemRemoved
@@ -39,8 +46,10 @@ const App : FC = () => {
         itemRemoved = true
       return removedState || !match 
     } )
+
+    // Update localStorage
     localStorage.setItem('basket', JSON.stringify( newBasket ) )
-    setBasketItems( newBasket)
+    setBasketItems( newBasket )
     swal("Removed Item", "Item has been removed from the basket","success")
   }
   

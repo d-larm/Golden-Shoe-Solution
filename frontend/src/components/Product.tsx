@@ -5,17 +5,18 @@ import { Link } from 'react-router-dom'
 import './Product.css'
 
 export type ProductProps = {
+    _id: string,
     name: string,
     image: string,
     price: number,
-    _id: string,
-    large?: boolean,
+    large?: boolean, // Determines size of product card
     size?: string,
     colour?: string,
-    description?: string,
+    description: string,
     sizes?: Array<string>,
     gender?: "Male" | "Female",
-    category?: string,
+    category: string,
+    stock: number,
 }
 
 const Product : FunctionComponent<ProductProps> = ( { name, _id: id, price, image, large, size } ) => (

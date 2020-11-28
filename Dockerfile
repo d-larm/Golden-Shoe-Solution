@@ -29,8 +29,6 @@ WORKDIR /usr/app/$NAME
 COPY $NAME/package*.json ./
 RUN npm ci
 
-# COPY --from=common /usr/app/common node_modules/@skouted/common/
-
 COPY $NAME .
 
 CMD ["npm", "start"]
